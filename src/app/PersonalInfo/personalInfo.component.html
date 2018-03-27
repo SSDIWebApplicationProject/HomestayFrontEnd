@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PersonalInfo</title>
+
+</head>
+<body>
+<div>
+  <h1>Personal Info</h1>
+
+  <form #f="ngForm">
+    <table class=hometable>
+
+      <tr>
+        <td class="op">First Name</td>
+        <td class="ip">
+          <input type="text" name="fName" required [(ngModel)]="search.name" ></td>
+      </tr>
+      <tr>
+        <td class="op">Last Name</td>
+        <td class="ip">
+          <input type="text" name="lName" required [(ngModel)]="search.lname" ></td>
+      </tr>
+      <tr>
+        <td class="op">email</td>
+        <td class="ip">
+          <input type="email" name="email" required   email [(ngModel)]="search.email"  ></td>
+      </tr>
+      <tr>
+        <td class="op">Phone Number</td>
+        <td class="ip">
+          <input type="number" name="phone" required [(ngModel)]="search.pnumber"  ></td>
+      </tr>
+    </table>
+    <button type="submit" [disabled]="!f.valid"  class="Searchbutton" routerLink="/TandC">Continue</button>
+  </form>
+
+</div>
+</body>
+</html>

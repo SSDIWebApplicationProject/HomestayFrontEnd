@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SearchRoom</title>
+</head>
+<body>
+<div>
+<ul>
+  <li *ngFor="let room of rooms">
+      <div class="row">
+        <div class="col-2">
+
+        </div>
+        <div class="col-4">
+          <img src={{room.roomUrl}} height="200px" width="400px">
+        </div>
+        <div class="col-4">
+          <div class ="col2">
+                <ul class="text1">
+                  <li>
+                    <h1 class="tab2">{{room.roomName}}</h1>
+                  </li>
+                  <li>
+                    <h3 class="tab2">{{room.distance}}</h3>
+                  </li>
+                  <li>
+                    <h3 class="tab2">Number of bedrooms: {{room.noBedroom}}</h3>
+                  </li>
+                  <li>
+                    <h3 class="tab2">Number of bathrooms: {{room.noBathroom}}</h3>
+                  </li>
+                  <li>
+                    <button routerLink="/PersonalInfo" class="tab2">BookNow</button>
+                  </li>
+                </ul>
+          </div>
+
+        </div>
+        <div class="col-2">
+
+        </div>
+      </div>
+
+ </li>
+</ul>
+</div>
+</body>
+</html>

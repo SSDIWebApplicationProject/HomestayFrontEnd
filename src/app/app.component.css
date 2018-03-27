@@ -1,0 +1,13 @@
+h1{
+	font-size: 50px;
+	color: #e60000;
+	text-align: center;
+
+}
+body{
+	height: 900px;;
+	background-image: url("Images/Image1.jpg");
+	text-align: center;
+  padding-top: 0px;
+  margin-top: 0px;
+}

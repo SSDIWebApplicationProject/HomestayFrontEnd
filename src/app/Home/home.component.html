@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>home</title>
+
+</head>
+<body>
+<div>
+
+
+<form #f="ngForm">
+
+
+	<table class=hometable>
+
+        <tr>
+    			<td class="op">Where to go?</td>
+    			<td class="ip">
+   			<select class="dd" name=city [(ngModel)]="search.city" required>
+          <option value="Select">Select</option>
+          <option *ngFor="let city of cities">{{city}}</option>
+        </select>
+          </td>
+    		</tr>
+        <tr>
+   			<td class="op">Arrival Date:</td>
+    			<td class="ip">
+            <input type="date" name="arrivalDate" [(ngModel)]="search.arrivalDate" required ></td>
+  		</tr>
+  		<tr>
+   			<td class="op">Departure Date:</td>
+    			<td class="ip">
+            <input type="date" name="departureDate" [(ngModel)]="search.departureDate" required ></td>
+  		</tr>
+  		<tr>
+   			<td class="op">No of Guests:</td>
+    			<td class="ip">
+            <input type="number"  name="noofGuests" [(ngModel)]="search.noofGuests"  required min="1"></td>
+
+  		</tr>
+ 	</table>
+ 	<div class=but>
+ 		<button  class="Searchbutton" type="submit" [disabled]="!f.valid"  routerLink="/searchroom">Search</button>
+ 	</div>
+</form>
+</div>
+</body>
+</html>
